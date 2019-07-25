@@ -1,7 +1,7 @@
 import React from 'react';
-import { manycats } from './robots'
-import CardList from './CardList'
-import SearchBar from './SearchBar'
+import { manycats } from '../components/robots'
+import CardList from '../components/CardList'
+import SearchBar from '../components/SearchBar'
 import './App.css';
 
 
@@ -25,8 +25,8 @@ class App extends React.Component {
       return cat.name.toLowerCase().includes(this.state.searchField.toLowerCase());
     })
     return (
-      <div>
-        <h1 className="tc">My Cat Friends</h1>
+      <div className="tc">
+        <h1>My Cat Friends</h1>
         <SearchBar search={this.searchBarValue} />
         <CardList manycats={compareSearchValue} />
       </div>
